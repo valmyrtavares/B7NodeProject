@@ -7,10 +7,14 @@ router.get("/",(req, res)=>{
         'nome':'Valmyr Tavares',
         'idade':50,
         mostrar:false,
+         testando: '<h1>Valmyr</h1>',
+         testa: '<h2>Valmyr Tavares</h2>',
         ingredientes:[
-            {nome:"Azeite", preco:22 },
-            {nome:"Feijão", preco:32 },
-        ]
+        
+        ],
+        interesses:[
+            'node','js','html'
+        ],
     });
 })
 

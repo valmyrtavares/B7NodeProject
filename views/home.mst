@@ -11,3 +11,20 @@
 <li>{{nome}} - {{preco}}</li>
 {{/ingredientes}}
 
+{{^ingredientes}}
+<p>Não há ingredientes</p>
+{{/ingredientes}}
+
+
+{{#interesses}}
+    <p>{{.}}</p>
+{{/interesses}}
+
+
+{{{testando}}}
+<hr>
+{{{testa}}}
+
+{{! Ele vai comentar esse código}}
+
+
