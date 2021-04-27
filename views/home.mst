@@ -1,3 +1,6 @@
+{{>header}}
+
+
 
 <p>Qualquer mensagem será bem vindas</p> 
 <p>Meu nome é {{nome}}</p>

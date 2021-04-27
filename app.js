@@ -8,7 +8,7 @@ const app = express();
 
 app.use('/', router);
 
-app.engine('mst',mustache())
+app.engine('mst',mustache(__dirname+'/views/partials','.mst'))
 app.set('view engine', 'mst');
 app.set('views ', __dirname + '/views')
 
