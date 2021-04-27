@@ -1,13 +1,22 @@
 const express = require('express')
-
-
 const router = express.Router();
+
+
 router.get("/",(req, res)=>{
-    res.send("Olha mundo")
+    res.render('home',{
+        'nome':'Valmyr Tavares',
+        'idade':50,
+        mostrar:false,
+        ingredientes:[
+            {nome:"Azeite", preco:22 },
+            {nome:"Feijão", preco:32 },
+        ]
+    });
 })
 
-router.get('/sobre',(req, res)=>{
-    res.send("Pagina Sobre")
-})
+
+
+
+
 
 module.exports = router;

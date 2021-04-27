@@ -1,0 +1,13 @@
+
+<p>Qualquer mensagem será bem vindas</p> 
+<p>Meu nome é {{nome}}</p>
+<p>Meu nome é {{idade}}</p>
+<h1>Outro teste</h1>
+{{#mostrar}}
+    <h1>Eu sou o mensageiro</h1>
+{{/mostrar}}
+
+{{#ingredientes}}
+<li>{{nome}} - {{preco}}</li>
+{{/ingredientes}}
+
