@@ -1,5 +1,8 @@
 {{>header}}
 
+<h1>{{testeGlobal}}</h1>
+<h1>{{h.defaultPageTitle}}</h1>
+<h3>{{tentandoDeNovo}}</h3>
 
 
 <p>Qualquer mensagem será bem vindas</p> 
@@ -27,6 +30,8 @@
 {{{testando}}}
 <hr>
 {{{testa}}}
+
+<h3>Meu nome é {{userInfo.name}}
 
 {{! Ele vai comentar esse código}}
 

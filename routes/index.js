@@ -1,22 +1,14 @@
 const express = require('express')
+const homeController = require('../controllers/homeController')
+const usersController = require("../controllers/userController")
+const postController = require('../controllers/postController.js')
+
 const router = express.Router();
 
-
-router.get("/",(req, res)=>{
-    res.render('home',{
-        'nome':'Valmyr Tavares',
-        'idade':50,
-        mostrar:false,
-         testando: '<h1>Valmyr</h1>',
-         testa: '<h2>Valmyr Tavares</h2>',
-        ingredientes:[
-        
-        ],
-        interesses:[
-            'node','js','html'
-        ],
-    });
-})
+router.get("/" ,homeController.index)
+router.get('/users/login', usersController.login)
+router.get('/post/add', postController.add)
+router.post('/post/add',postController.addAction)
 
 
 

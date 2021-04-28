@@ -1,2 +1,6 @@
 <h1>Cabeçario</h1>
-<hr>
+<hr/>
+    {{#h.menu}}
+        <li><a href="{{slug}}">{{name}}</a></lI>
+    {{/h.menu}}
+<hr/>
