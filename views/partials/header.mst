@@ -4,3 +4,14 @@
         <li><a href="{{slug}}">{{name}}</a></lI>
     {{/h.menu}}
 <hr/>
+{{#flashes}}
+    {{#success}}
+        <div>{{.}}</div>
+    {{/success}}
+     {{#error}}
+        <div>{{.}}</div>
+    {{/error}}
+     {{#info}}
+        <div>{{.}}</div>
+    {{/info}}
+{{/flashes}}
