@@ -1,38 +1,12 @@
 {{>header}}
 
-<h1>{{testeGlobal}}</h1>
-<h1>{{h.defaultPageTitle}}</h1>
-<h3>{{tentandoDeNovo}}</h3>
+<h1>Página Home</h1>
 
+{{#posts}}
+    <h3>{{title}}</h3>
+    <P>{{body}}</p>
+    <hr/>  
 
-<p>Qualquer mensagem será bem vindas</p> 
-<p>Meu nome é {{nome}}</p>
-<p>Meu nome é {{idade}}</p>
-<h1>Outro teste</h1>
-{{#mostrar}}
-    <h1>Eu sou o mensageiro</h1>
-{{/mostrar}}
-
-{{#ingredientes}}
-<li>{{nome}} - {{preco}}</li>
-{{/ingredientes}}
-
-{{^ingredientes}}
-<p>Não há ingredientes</p>
-{{/ingredientes}}
-
-
-{{#interesses}}
-    <p>{{.}}</p>
-{{/interesses}}
-
-
-{{{testando}}}
-<hr>
-{{{testa}}}
-
-<h3>Meu nome é {{userInfo.name}}
-
-{{! Ele vai comentar esse código}}
+{{/posts}}
 
 
