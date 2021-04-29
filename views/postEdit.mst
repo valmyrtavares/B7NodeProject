@@ -2,6 +2,7 @@
 
 
 <h2>Editar Post</h2>
+<h1>testando {{post.title}}</h1>
 
 <form method="POST">
 <label>

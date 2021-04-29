@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 require('dotenv').config({path:'variables.env'})
 
 //Conexão cm o meu banco de dados
-mongoose.connect(process.env.DATABASE,{ useNewUrlParser: true, useUnifiedTopology: true  } );
+mongoose.connect(process.env.DATABASE,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false } );
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error',()=>{
     console.error("ERRO:" + error.message)
@@ -17,5 +17,5 @@ const app = require('./app')
 app.set('port', process.env.PORT);
 
 const server = app.listen(app.get('port'), ()=>{
-    console.log("Servidor rodando na porta: "+  server.address().port);
+    console.log("Servidor rodando na porta: "+  server.address().port); 
 }) 
