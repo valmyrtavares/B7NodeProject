@@ -23,3 +23,20 @@ exports.add = (req, res)=>{
    req.flash('success','Post Salvo com sucesso')
     res.redirect('/')
  } 
+ 
+ exports.edit = async (req, res)=>{
+     const post = await Post.findOne({slug:req.params.slug})
+     res.render('postEdit',{post})
+ }
+
+ exports.editAction = async(req, res)=>{
+     const post = await Post.findOneAndUpdate(
+         {slug:req.params.slug},
+         req.body,
+         {
+             new:true,
+             runValidators:true 
+         });
+         req.flash('success', 'Post atualizado com sucesso')
+         res.redirect('/')
+ }
