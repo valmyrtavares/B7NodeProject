@@ -4,8 +4,8 @@ mongoose.Promise = global.Promise;
 const postSchema = new mongoose.Schema({
     title:{
         type:String,
-        trim:true
-      
+        trim:true,
+        required:"O post precisa de um titulo"
     },
     slug:String,
     body:{
@@ -14,6 +14,5 @@ const postSchema = new mongoose.Schema({
     },
     tags:[String]
 });
-
 
 module.exports = mongoose.model('Post', postSchema)
