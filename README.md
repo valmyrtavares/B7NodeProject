@@ -6,3 +6,4 @@ Na aula ele diz que o slug está ficando com a letra maiuscula como no título, 
 mas caso comece a dar esse problema vc faz
   this.slug = slug(this.title, {lower:true});
   OBS Na aula 8 quando eu acrescento essa linha cima ele da erro mas não para de funcionar, nunca vi isso
+  app.use(express.static(__dirname+'/public')) Isso torna essa pasta publica é estática a pasta pubic não precisa ser nomeada pode partir dela

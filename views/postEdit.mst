@@ -17,7 +17,8 @@ Corpo
 </label>
 <br/>
 <label>
-Tags:  
+Tags:  <small>(Separar as tags por virgula)</small></br>
+<input type=text name="tags" value="{{post.tags}}"/> 
 </label>
 <br/> 
 <label>

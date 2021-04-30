@@ -1,0 +1,17 @@
+{{>header}}
+
+<h1>Página Home</h1>
+
+
+    <h3><a href="/post/{{slug}}">{{post.title}}</a></h3>
+    <P>{{post.body}}</p>
+
+   
+    <hr/>  
+     {{#tags}}
+    <small>{{.}}</small>
+    {{/tags}}
+    <p> view com {{post.tags}}</p>
+
+
+

@@ -3,10 +3,12 @@
 <h1>Página Home</h1>
 
 {{#posts}}
+    <div class="post">
     <h3><a href="/post/{{slug}}">{{title}}</a></h3>
     <P>{{body}}</p>
     <a href="/post/{{slug}}/edit">Editar</a>
-    <hr/>  
+    </div>  
+    
 
 {{/posts}}
 
