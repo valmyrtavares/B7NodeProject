@@ -28,11 +28,15 @@ postSchema.pre('save', async function(next){
 
         if(postsWithSlug.length>0){
             this.slug = `${this.slug}-${postsWithSlug.length + 1}`;
-        }
-        
+        }        
     }
-
     next();
 })
+
+postSchema.statics.getTagsList = function() {
+    return this.aggregate([
+        { $unwind:'$tags'}
+    ])
+}
 
 module.exports = mongoose.model('Post', postSchema)
