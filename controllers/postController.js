@@ -10,7 +10,7 @@ exports.add = (req, res)=>{
 exports.addAction = async(req, res) =>{
     req.body.tags = req.body.tags.split(',').map(t=>t.trim())
     const post = new Post(req.body)  
-    console.log(post)
+    
 
     try{
         await post.save();
