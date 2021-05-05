@@ -13,7 +13,9 @@ TAG:{{tag}}
         {{/photo}}
     <h3><a href="/post/{{slug}}">{{title}}</a></h3>
     <P>{{body}}</p>
+    {{#user}}
     <a href="/post/{{slug}}/edit">Editar</a>
+    {{/user}}
     </div>  
     
 
