@@ -4,12 +4,18 @@ const usersController = require("../controllers/userController")
 const postController = require('../controllers/postController.js')
 
 const router = express.Router();
-const imageMiddleware = require('../middlewares/imageMiddlewares')
+const imageMiddleware = require('../middlewares/imageMiddlewares');
+const { route } = require('../app');
 
 router.get("/" ,homeController.index)
+
 router.get('/users/login', usersController.login)
+router.post('/users/login', usersController.loginAction)
+
+
 router.get('/users/register', usersController.register)
 router.post('/users/register', usersController.registerAction)
+router.get('/users/logout', usersController.logout)
 
 router.get('/post/add', postController.add)
 router.post('/post/add',

@@ -4,7 +4,15 @@
     </head>
     <body>
         <header>
-            <h1>Cabeçario</h1>
+            <h1>Cabeçario</h1>            
+           
+           
+            {{#user}}
+                Ola, {{user.name}}! <a href="/users/logout">Sair</a>
+            {{/user}}    
+            
+        
+
             <ul>
             {{#h.menu}}
                 <li><a href="{{slug}}">{{name}}</a></lI>

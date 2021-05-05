@@ -1,4 +1,5 @@
 const express = require("express")
+const mongoose = require('mongoose');
 const mustache = require('mustache-express')
 const router = require('./routes/index')
 const helpers = require('./helpers')
@@ -28,11 +29,6 @@ app.use(session({
 
 app.use(flash());
 
-app.use((req, res, next)=>{
-    res.locals.h = helpers;
-    res.locals.flashes = req.flash();
-    next();
-})
 
 app.use(passport.initialize());
 app.use(passport.session())
@@ -42,6 +38,14 @@ const User = require('./models/User');
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+app.use((req, res, next)=>{
+    res.locals.h = helpers;
+    res.locals.flashes = req.flash();
+    res.locals.user = req.user   
+    next();
+})
+
 
 app.use('/', router);
 
